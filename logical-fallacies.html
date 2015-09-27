@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>المغالطات المنطقية بالداريجة.</title>
+<!-- 2015-09-27 Sun 16:59 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">المغالطات المنطقية بالداريجة.</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introduction</a>
+<ul>
+<li><a href="#sec-1-1">1.1. <span class="todo TODO">TODO</span> Write the introduction.</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Formal fallacies</a>
+<ul>
+<li><a href="#sec-2-1">2.1. <span class="todo TODO">TODO</span> Titles and subtitles are waiting for translation in Darija</a></li>
+<li><a href="#sec-2-2">2.2. Unclassified</a>
+<ul>
+<li><a href="#sec-2-2-1">2.2.1. Anecdotal fallacy</a></li>
+<li><a href="#sec-2-2-2">2.2.2. Appeal to probability</a></li>
+<li><a href="#sec-2-2-3">2.2.3. Argument from fallacy</a></li>
+<li><a href="#sec-2-2-4">2.2.4. Base rate fallacy</a></li>
+<li><a href="#sec-2-2-5">2.2.5. Conjunction fallacy</a></li>
+<li><a href="#sec-2-2-6">2.2.6. Masked man fallacy</a></li>
+<li><a href="#sec-2-2-7">2.2.7. Unwarranted assumption fallacy</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-3">2.3. Propositional logic</a>
+<ul>
+<li><a href="#sec-2-3-1">2.3.1. Affirming a disjunct</a></li>
+<li><a href="#sec-2-3-2">2.3.2. Affirming the consequent</a></li>
+<li><a href="#sec-2-3-3">2.3.3. Denying the antecedent</a></li>
+<li><a href="#sec-2-3-4">2.3.4. Argument from fallacy</a></li>
+<li><a href="#sec-2-3-5">2.3.5. False dilemma</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-4">2.4. Quantification logic</a>
+<ul>
+<li><a href="#sec-2-4-1">2.4.1. Existential fallacy</a></li>
+<li><a href="#sec-2-4-2">2.4.2. Illicit conversion</a></li>
+<li><a href="#sec-2-4-3">2.4.3. Proof by example</a></li>
+<li><a href="#sec-2-4-4">2.4.4. Quantifier Shift</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-5">2.5. Syllogistic fallacy</a>
+<ul>
+<li><a href="#sec-2-5-1">2.5.1. Affirmative conclusion from a negative premise</a></li>
+<li><a href="#sec-2-5-2">2.5.2. Exclusive premises</a></li>
+<li><a href="#sec-2-5-3">2.5.3. Existential</a></li>
+<li><a href="#sec-2-5-4">2.5.4. Necessity</a></li>
+<li><a href="#sec-2-5-5">2.5.5. Four-term fallacy</a></li>
+<li><a href="#sec-2-5-6">2.5.6. Illicit major</a></li>
+<li><a href="#sec-2-5-7">2.5.7. Illicit minor</a></li>
+<li><a href="#sec-2-5-8">2.5.8. Negative conclusion from affirmative premises</a></li>
+<li><a href="#sec-2-5-9">2.5.9. Undistributed middle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Informal fallacies</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Correlative-based fallacies</a>
+<ul>
+<li><a href="#sec-3-1-1">3.1.1. False dilemma</a></li>
+<li><a href="#sec-3-1-2">3.1.2. Denying the correlative</a></li>
+<li><a href="#sec-3-1-3">3.1.3. Suppressed correlative</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-2">3.2. Fallacies of illicit transference</a>
+<ul>
+<li><a href="#sec-3-2-1">3.2.1. Composition</a></li>
+<li><a href="#sec-3-2-2">3.2.2. Division</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-3">3.3. Deductive fallacies</a>
+<ul>
+<li><a href="#sec-3-3-1">3.3.1. Accident</a></li>
+<li><a href="#sec-3-3-2">3.3.2. Converse accident</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-4">3.4. Inductive fallacies</a>
+<ul>
+<li><a href="#sec-3-4-1">3.4.1. Sampling bias (Cherry picking McNamara fallacy)</a></li>
+<li><a href="#sec-3-4-2">3.4.2. Base rate fallacy / Conjunction fallacy</a></li>
+<li><a href="#sec-3-4-3">3.4.3. False analogy</a></li>
+<li><a href="#sec-3-4-4">3.4.4. Hasty generalization / Slothful induction</a></li>
+<li><a href="#sec-3-4-5">3.4.5. Misleading vividness</a></li>
+<li><a href="#sec-3-4-6">3.4.6. Overwhelming exception</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-5">3.5. Questionable cause</a>
+<ul>
+<li><a href="#sec-3-5-1">3.5.1. Animistic (Furtive)</a></li>
+<li><a href="#sec-3-5-2">3.5.2. Correlation proves causation (Cum hoc ergo propter hoc)</a></li>
+<li><a href="#sec-3-5-3">3.5.3. Gambler's (inverse)</a></li>
+<li><a href="#sec-3-5-4">3.5.4. Post hoc</a></li>
+<li><a href="#sec-3-5-5">3.5.5. Regression</a></li>
+<li><a href="#sec-3-5-6">3.5.6. Single cause</a></li>
+<li><a href="#sec-3-5-7">3.5.7. Slippery slope</a></li>
+<li><a href="#sec-3-5-8">3.5.8. Texas sharpshooter</a></li>
+<li><a href="#sec-3-5-9">3.5.9. Third-cause</a></li>
+<li><a href="#sec-3-5-10">3.5.10. Wrong direction</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-6">3.6. Vagueness / ambiguity</a>
+<ul>
+<li><a href="#sec-3-6-1">3.6.1. Accent</a></li>
+<li><a href="#sec-3-6-2">3.6.2. Amphibology</a></li>
+<li><a href="#sec-3-6-3">3.6.3. Continuum fallacy / Sorites paradox</a></li>
+<li><a href="#sec-3-6-4">3.6.4. False precision</a></li>
+<li><a href="#sec-3-6-5">3.6.5. Slippery slope</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-7">3.7. Equivocation</a>
+<ul>
+<li><a href="#sec-3-7-1">3.7.1. Equivocation</a></li>
+<li><a href="#sec-3-7-2">3.7.2. False attribution</a></li>
+<li><a href="#sec-3-7-3">3.7.3. Quoting out of context</a></li>
+<li><a href="#sec-3-7-4">3.7.4. Loki's Wager</a></li>
+<li><a href="#sec-3-7-5">3.7.5. No true Scotsman</a></li>
+<li><a href="#sec-3-7-6">3.7.6. Reification</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-8">3.8. Question-begging fallacies</a>
+<ul>
+<li><a href="#sec-3-8-1">3.8.1. Circular reasoning / Begging the question</a></li>
+<li><a href="#sec-3-8-2">3.8.2. Loaded language (Leading question)</a></li>
+<li><a href="#sec-3-8-3">3.8.3. Compound question / Loaded question</a></li>
+<li><a href="#sec-3-8-4">3.8.4. No true Scotsman</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Unclassified fallacies</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Appeal to faith</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Notes</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> <span class="todo TODO">TODO</span> Write the introduction.</h3>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Formal fallacies</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> <span class="todo TODO">TODO</span> Titles and subtitles are waiting for translation in Darija</h3>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Unclassified</h3>
+<div class="outline-text-3" id="text-2-2">
+</div><div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> Anecdotal fallacy</h4>
+</div>
+<div id="outline-container-sec-2-2-2" class="outline-4">
+<h4 id="sec-2-2-2"><span class="section-number-4">2.2.2</span> Appeal to probability</h4>
+</div>
+<div id="outline-container-sec-2-2-3" class="outline-4">
+<h4 id="sec-2-2-3"><span class="section-number-4">2.2.3</span> Argument from fallacy</h4>
+</div>
+<div id="outline-container-sec-2-2-4" class="outline-4">
+<h4 id="sec-2-2-4"><span class="section-number-4">2.2.4</span> Base rate fallacy</h4>
+</div>
+<div id="outline-container-sec-2-2-5" class="outline-4">
+<h4 id="sec-2-2-5"><span class="section-number-4">2.2.5</span> Conjunction fallacy</h4>
+</div>
+<div id="outline-container-sec-2-2-6" class="outline-4">
+<h4 id="sec-2-2-6"><span class="section-number-4">2.2.6</span> Masked man fallacy</h4>
+</div>
+<div id="outline-container-sec-2-2-7" class="outline-4">
+<h4 id="sec-2-2-7"><span class="section-number-4">2.2.7</span> Unwarranted assumption fallacy</h4>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Propositional logic</h3>
+<div class="outline-text-3" id="text-2-3">
+</div><div id="outline-container-sec-2-3-1" class="outline-4">
+<h4 id="sec-2-3-1"><span class="section-number-4">2.3.1</span> Affirming a disjunct</h4>
+</div>
+<div id="outline-container-sec-2-3-2" class="outline-4">
+<h4 id="sec-2-3-2"><span class="section-number-4">2.3.2</span> Affirming the consequent</h4>
+</div>
+<div id="outline-container-sec-2-3-3" class="outline-4">
+<h4 id="sec-2-3-3"><span class="section-number-4">2.3.3</span> Denying the antecedent</h4>
+</div>
+<div id="outline-container-sec-2-3-4" class="outline-4">
+<h4 id="sec-2-3-4"><span class="section-number-4">2.3.4</span> Argument from fallacy</h4>
+</div>
+<div id="outline-container-sec-2-3-5" class="outline-4">
+<h4 id="sec-2-3-5"><span class="section-number-4">2.3.5</span> False dilemma</h4>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> Quantification logic</h3>
+<div class="outline-text-3" id="text-2-4">
+</div><div id="outline-container-sec-2-4-1" class="outline-4">
+<h4 id="sec-2-4-1"><span class="section-number-4">2.4.1</span> Existential fallacy</h4>
+</div>
+<div id="outline-container-sec-2-4-2" class="outline-4">
+<h4 id="sec-2-4-2"><span class="section-number-4">2.4.2</span> Illicit conversion</h4>
+</div>
+<div id="outline-container-sec-2-4-3" class="outline-4">
+<h4 id="sec-2-4-3"><span class="section-number-4">2.4.3</span> Proof by example</h4>
+</div>
+<div id="outline-container-sec-2-4-4" class="outline-4">
+<h4 id="sec-2-4-4"><span class="section-number-4">2.4.4</span> Quantifier Shift</h4>
+</div>
+</div>
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> Syllogistic fallacy</h3>
+<div class="outline-text-3" id="text-2-5">
+</div><div id="outline-container-sec-2-5-1" class="outline-4">
+<h4 id="sec-2-5-1"><span class="section-number-4">2.5.1</span> Affirmative conclusion from a negative premise</h4>
+</div>
+<div id="outline-container-sec-2-5-2" class="outline-4">
+<h4 id="sec-2-5-2"><span class="section-number-4">2.5.2</span> Exclusive premises</h4>
+</div>
+<div id="outline-container-sec-2-5-3" class="outline-4">
+<h4 id="sec-2-5-3"><span class="section-number-4">2.5.3</span> Existential</h4>
+</div>
+<div id="outline-container-sec-2-5-4" class="outline-4">
+<h4 id="sec-2-5-4"><span class="section-number-4">2.5.4</span> Necessity</h4>
+</div>
+<div id="outline-container-sec-2-5-5" class="outline-4">
+<h4 id="sec-2-5-5"><span class="section-number-4">2.5.5</span> Four-term fallacy</h4>
+</div>
+<div id="outline-container-sec-2-5-6" class="outline-4">
+<h4 id="sec-2-5-6"><span class="section-number-4">2.5.6</span> Illicit major</h4>
+</div>
+<div id="outline-container-sec-2-5-7" class="outline-4">
+<h4 id="sec-2-5-7"><span class="section-number-4">2.5.7</span> Illicit minor</h4>
+</div>
+<div id="outline-container-sec-2-5-8" class="outline-4">
+<h4 id="sec-2-5-8"><span class="section-number-4">2.5.8</span> Negative conclusion from affirmative premises</h4>
+</div>
+<div id="outline-container-sec-2-5-9" class="outline-4">
+<h4 id="sec-2-5-9"><span class="section-number-4">2.5.9</span> Undistributed middle</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Informal fallacies</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Correlative-based fallacies</h3>
+<div class="outline-text-3" id="text-3-1">
+</div><div id="outline-container-sec-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> False dilemma</h4>
+</div>
+<div id="outline-container-sec-3-1-2" class="outline-4">
+<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> Denying the correlative</h4>
+</div>
+<div id="outline-container-sec-3-1-3" class="outline-4">
+<h4 id="sec-3-1-3"><span class="section-number-4">3.1.3</span> Suppressed correlative</h4>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Fallacies of illicit transference</h3>
+<div class="outline-text-3" id="text-3-2">
+</div><div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1"><span class="section-number-4">3.2.1</span> Composition</h4>
+</div>
+<div id="outline-container-sec-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2"><span class="section-number-4">3.2.2</span> Division</h4>
+</div>
+</div>
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Deductive fallacies</h3>
+<div class="outline-text-3" id="text-3-3">
+</div><div id="outline-container-sec-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1"><span class="section-number-4">3.3.1</span> Accident</h4>
+</div>
+<div id="outline-container-sec-3-3-2" class="outline-4">
+<h4 id="sec-3-3-2"><span class="section-number-4">3.3.2</span> Converse accident</h4>
+</div>
+</div>
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Inductive fallacies</h3>
+<div class="outline-text-3" id="text-3-4">
+</div><div id="outline-container-sec-3-4-1" class="outline-4">
+<h4 id="sec-3-4-1"><span class="section-number-4">3.4.1</span> Sampling bias (Cherry picking McNamara fallacy)</h4>
+</div>
+<div id="outline-container-sec-3-4-2" class="outline-4">
+<h4 id="sec-3-4-2"><span class="section-number-4">3.4.2</span> Base rate fallacy / Conjunction fallacy</h4>
+</div>
+<div id="outline-container-sec-3-4-3" class="outline-4">
+<h4 id="sec-3-4-3"><span class="section-number-4">3.4.3</span> False analogy</h4>
+</div>
+<div id="outline-container-sec-3-4-4" class="outline-4">
+<h4 id="sec-3-4-4"><span class="section-number-4">3.4.4</span> Hasty generalization / Slothful induction</h4>
+</div>
+<div id="outline-container-sec-3-4-5" class="outline-4">
+<h4 id="sec-3-4-5"><span class="section-number-4">3.4.5</span> Misleading vividness</h4>
+</div>
+<div id="outline-container-sec-3-4-6" class="outline-4">
+<h4 id="sec-3-4-6"><span class="section-number-4">3.4.6</span> Overwhelming exception</h4>
+</div>
+</div>
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> Questionable cause</h3>
+<div class="outline-text-3" id="text-3-5">
+</div><div id="outline-container-sec-3-5-1" class="outline-4">
+<h4 id="sec-3-5-1"><span class="section-number-4">3.5.1</span> Animistic (Furtive)</h4>
+</div>
+<div id="outline-container-sec-3-5-2" class="outline-4">
+<h4 id="sec-3-5-2"><span class="section-number-4">3.5.2</span> Correlation proves causation (Cum hoc ergo propter hoc)</h4>
+</div>
+<div id="outline-container-sec-3-5-3" class="outline-4">
+<h4 id="sec-3-5-3"><span class="section-number-4">3.5.3</span> Gambler's (inverse)</h4>
+</div>
+<div id="outline-container-sec-3-5-4" class="outline-4">
+<h4 id="sec-3-5-4"><span class="section-number-4">3.5.4</span> Post hoc</h4>
+</div>
+<div id="outline-container-sec-3-5-5" class="outline-4">
+<h4 id="sec-3-5-5"><span class="section-number-4">3.5.5</span> Regression</h4>
+</div>
+<div id="outline-container-sec-3-5-6" class="outline-4">
+<h4 id="sec-3-5-6"><span class="section-number-4">3.5.6</span> Single cause</h4>
+</div>
+<div id="outline-container-sec-3-5-7" class="outline-4">
+<h4 id="sec-3-5-7"><span class="section-number-4">3.5.7</span> Slippery slope</h4>
+</div>
+<div id="outline-container-sec-3-5-8" class="outline-4">
+<h4 id="sec-3-5-8"><span class="section-number-4">3.5.8</span> Texas sharpshooter</h4>
+</div>
+<div id="outline-container-sec-3-5-9" class="outline-4">
+<h4 id="sec-3-5-9"><span class="section-number-4">3.5.9</span> Third-cause</h4>
+</div>
+<div id="outline-container-sec-3-5-10" class="outline-4">
+<h4 id="sec-3-5-10"><span class="section-number-4">3.5.10</span> Wrong direction</h4>
+</div>
+</div>
+<div id="outline-container-sec-3-6" class="outline-3">
+<h3 id="sec-3-6"><span class="section-number-3">3.6</span> Vagueness / ambiguity</h3>
+<div class="outline-text-3" id="text-3-6">
+</div><div id="outline-container-sec-3-6-1" class="outline-4">
+<h4 id="sec-3-6-1"><span class="section-number-4">3.6.1</span> Accent</h4>
+</div>
+<div id="outline-container-sec-3-6-2" class="outline-4">
+<h4 id="sec-3-6-2"><span class="section-number-4">3.6.2</span> Amphibology</h4>
+</div>
+<div id="outline-container-sec-3-6-3" class="outline-4">
+<h4 id="sec-3-6-3"><span class="section-number-4">3.6.3</span> Continuum fallacy / Sorites paradox</h4>
+</div>
+<div id="outline-container-sec-3-6-4" class="outline-4">
+<h4 id="sec-3-6-4"><span class="section-number-4">3.6.4</span> False precision</h4>
+</div>
+<div id="outline-container-sec-3-6-5" class="outline-4">
+<h4 id="sec-3-6-5"><span class="section-number-4">3.6.5</span> Slippery slope</h4>
+</div>
+</div>
+<div id="outline-container-sec-3-7" class="outline-3">
+<h3 id="sec-3-7"><span class="section-number-3">3.7</span> Equivocation</h3>
+<div class="outline-text-3" id="text-3-7">
+</div><div id="outline-container-sec-3-7-1" class="outline-4">
+<h4 id="sec-3-7-1"><span class="section-number-4">3.7.1</span> Equivocation</h4>
+</div>
+<div id="outline-container-sec-3-7-2" class="outline-4">
+<h4 id="sec-3-7-2"><span class="section-number-4">3.7.2</span> False attribution</h4>
+</div>
+<div id="outline-container-sec-3-7-3" class="outline-4">
+<h4 id="sec-3-7-3"><span class="section-number-4">3.7.3</span> Quoting out of context</h4>
+</div>
+<div id="outline-container-sec-3-7-4" class="outline-4">
+<h4 id="sec-3-7-4"><span class="section-number-4">3.7.4</span> Loki's Wager</h4>
+</div>
+<div id="outline-container-sec-3-7-5" class="outline-4">
+<h4 id="sec-3-7-5"><span class="section-number-4">3.7.5</span> No true Scotsman</h4>
+</div>
+<div id="outline-container-sec-3-7-6" class="outline-4">
+<h4 id="sec-3-7-6"><span class="section-number-4">3.7.6</span> Reification</h4>
+</div>
+</div>
+<div id="outline-container-sec-3-8" class="outline-3">
+<h3 id="sec-3-8"><span class="section-number-3">3.8</span> Question-begging fallacies</h3>
+<div class="outline-text-3" id="text-3-8">
+</div><div id="outline-container-sec-3-8-1" class="outline-4">
+<h4 id="sec-3-8-1"><span class="section-number-4">3.8.1</span> Circular reasoning / Begging the question</h4>
+</div>
+<div id="outline-container-sec-3-8-2" class="outline-4">
+<h4 id="sec-3-8-2"><span class="section-number-4">3.8.2</span> Loaded language (Leading question)</h4>
+</div>
+<div id="outline-container-sec-3-8-3" class="outline-4">
+<h4 id="sec-3-8-3"><span class="section-number-4">3.8.3</span> Compound question / Loaded question</h4>
+</div>
+<div id="outline-container-sec-3-8-4" class="outline-4">
+<h4 id="sec-3-8-4"><span class="section-number-4">3.8.4</span> No true Scotsman</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Unclassified fallacies</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Appeal to faith</h3>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Notes</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>This list is to be reviewed and changer if necessary
+</li>
+<li>The classification of fallacies can change
+</li>
+<li>Contributions and ideas are welcome if well formulated
+</li>
+<li>Refs
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/List_of_fallacies">https://en.wikipedia.org/wiki/List_of_fallacies</a>
+</li>
+<li><a href="http://www.nizkor.org/features/fallacies/">http://www.nizkor.org/features/fallacies/</a>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Formal_fallacy">https://en.wikipedia.org/wiki/Formal_fallacy</a>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Informal_fallacy">https://en.wikipedia.org/wiki/Informal_fallacy</a>
+</li>
+<li><a href="http://rationalwiki.org/wiki/Logical_fallacy">http://rationalwiki.org/wiki/Logical_fallacy</a>
+</li>
+<li><a href="http://www.logicallyfallacious.com/">http://www.logicallyfallacious.com/</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">[2015-09-27 Sun]</span></span></p>
+<p class="date">Created: 2015-09-27 Sun 16:59</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

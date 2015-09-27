@@ -1,0 +1,99 @@
+#+TITLE: المغالطات المنطقية بالداريجة.
+#+LICENSE: See LICENSE
+#+DATE: [2015-09-27 Sun]
+
+* Introduction
+** TODO [#C] Write the introduction.
+* [#A] Formal fallacies
+** TODO [#A] Titles and subtitles are waiting for translation in Darija
+** Unclassified
+*** Anecdotal fallacy
+*** Appeal to probability
+*** Argument from fallacy
+*** Base rate fallacy
+*** Conjunction fallacy
+*** Masked man fallacy
+*** Unwarranted assumption fallacy
+** Propositional logic
+*** Affirming a disjunct
+*** Affirming the consequent
+*** Denying the antecedent
+*** Argument from fallacy
+*** False dilemma
+** Quantification logic
+*** Existential fallacy
+*** Illicit conversion
+*** Proof by example
+*** Quantifier Shift
+** Syllogistic fallacy
+*** Affirmative conclusion from a negative premise
+*** Exclusive premises
+*** Existential
+*** Necessity
+*** Four-term fallacy
+*** Illicit major
+*** Illicit minor
+*** Negative conclusion from affirmative premises
+*** Undistributed middle
+* [#B] Informal fallacies
+** Correlative-based fallacies
+*** False dilemma
+*** Denying the correlative
+*** Suppressed correlative
+** Fallacies of illicit transference
+*** Composition
+***  Division
+** Deductive fallacies
+*** Accident
+*** Converse accident
+** Inductive fallacies
+*** Sampling bias (Cherry picking McNamara fallacy)
+*** Base rate fallacy / Conjunction fallacy
+*** False analogy
+*** Hasty generalization / Slothful induction
+*** Misleading vividness
+*** Overwhelming exception
+** Questionable cause
+*** Animistic (Furtive)
+*** Correlation proves causation (Cum hoc ergo propter hoc)
+*** Gambler's (inverse)
+*** Post hoc
+*** Regression
+*** Single cause
+*** Slippery slope
+*** Texas sharpshooter
+*** Third-cause
+*** Wrong direction
+** Vagueness / ambiguity
+*** Accent
+*** Amphibology
+*** Continuum fallacy / Sorites paradox
+*** False precision
+*** Slippery slope
+** Equivocation
+*** Equivocation
+*** False attribution
+*** Quoting out of context
+*** Loki's Wager
+*** No true Scotsman
+*** Reification
+** Question-begging fallacies
+*** Circular reasoning / Begging the question
+*** Loaded language (Leading question)
+*** Compound question / Loaded question
+*** No true Scotsman
+* [#C] Unclassified fallacies
+** Appeal to faith
+#+INCLUDE: "unclassified/appeal-to-faith.org" :lines "10-"
+* Notes
+- This project is hosted on https://github.com/sireseog/fallacies and https://fallacies.us.to
+- This list is to be reviewed and changer if necessary
+- The classification of fallacies can change
+- Contributions and ideas are welcome if well formulated
+- Refs
+  - https://en.wikipedia.org/wiki/List_of_fallacies
+  - http://www.nizkor.org/features/fallacies/
+  - https://en.wikipedia.org/wiki/Formal_fallacy
+  - https://en.wikipedia.org/wiki/Informal_fallacy
+  - http://rationalwiki.org/wiki/Logical_fallacy
+  - http://www.logicallyfallacious.com/
