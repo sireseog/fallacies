@@ -20,7 +20,7 @@
 *** Denying the antecedent
 *** Argument from fallacy
 *** False dilemma
-#+INCLUDE: "formal/false-dilemma.org" :lines "4-"
+k#+INCLUDE: "formal/false-dilemma.org" :lines "4-"
 ** Quantification logic
 *** Existential fallacy
 *** Illicit conversion
@@ -87,6 +87,8 @@
 ** Appeal to faith
 #+INCLUDE: "unclassified/appeal-to-faith.org" :lines "10-"
 * Notes
+- The header of the template file should be reviewed
+- The template file can be modified
 - This project is hosted on https://github.com/sireseog/fallacies and https://fallacies.us.to
 - This list is to be reviewed and changer if necessary
 - The classification of fallacies can change
