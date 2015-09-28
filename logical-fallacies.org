@@ -20,6 +20,7 @@
 *** Denying the antecedent
 *** Argument from fallacy
 *** False dilemma
+#+INCLUDE: "formal/false-dilemma.org" :lines "4-"
 ** Quantification logic
 *** Existential fallacy
 *** Illicit conversion
